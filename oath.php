@@ -11,14 +11,20 @@
 
     $curl = curl_init($oauth2token_url);
 
-    $headers = array('Content-Type: application/json', 'Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');
+    $headers = array('Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');
 
-    curl_setopt($curl, CURLOPT_POST, true);
+    //curl_setopt($curl, CURLOPT_POST, true);
+    //curl_setopt($curl, CURLOPT_POSTFIELDS, $clienttoken_post);
+    //curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    //curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+    //curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+    //curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $clienttoken_post);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
 
     $json_response = curl_exec($curl);
 
