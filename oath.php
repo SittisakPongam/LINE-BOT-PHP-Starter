@@ -6,6 +6,7 @@
     $clienttoken_post = array(
     "username" => "user@forth",
     "password" => "forth#1234",
+    "Content-Type" => "application/x-www-form-urlencoded",
     "grant_type" => "password"
     );
 
