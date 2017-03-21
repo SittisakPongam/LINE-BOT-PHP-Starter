@@ -11,7 +11,7 @@
 
     $curl = curl_init($oauth2token_url);
 
-    $headers = array('Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');
+    $headers = array('Content-Type: application/x-www-form-urlencoded','Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');
 
     //curl_setopt($curl, CURLOPT_POST, true);
     //curl_setopt($curl, CURLOPT_POSTFIELDS, $clienttoken_post);
