@@ -62,10 +62,7 @@ function getVehicleStatus($replyToken)
 
 if(!isset($_COOKIE["accessToken"])) {
     echo get_oauth2_token();
-} else {
-    echo "accessToken :'" . $_COOKIE["accessToken"] . "' is set!<br>";
-    echo "refreshToken: " . $_COOKIE["refreshToken"];
-}
+} 
 
 if($_COOKIE["accessToken"] != "")
 {
