@@ -52,8 +52,8 @@ function getVehicleStatus($replyToken)
 	        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);         
-            $result = curl_exec($ch);
-            curl_close($ch);
+            $result = curl_exec($curl);
+            curl_close($curl);
 
             //$obj = json_decode($result);			
 
