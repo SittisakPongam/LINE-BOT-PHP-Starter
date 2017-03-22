@@ -2,7 +2,7 @@
 
 	function get_oauth2_token() {
 
-    $oauth2token_url = "https://webapi.forthtrack.com/authorizationserver11/token";
+    $oauth2token_url = "https://webapi.forthtrack.com/authorizationserver/token";
 
     $curl = curl_init($oauth2token_url);
 
