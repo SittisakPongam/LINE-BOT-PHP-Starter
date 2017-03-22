@@ -11,7 +11,8 @@
 
     $curl = curl_init($oauth2token_url);
 
-    $data = array('Content-Type: application/x-www-form-urlencoded','username:user@forth','password:forth#1234','grant_type:password');
+$data = 'username=user@forth&password=forth#1234&grant_type=password';
+    //$data = array('Content-Type: application/x-www-form-urlencoded','username:user@forth','password:forth#1234','grant_type:password');
     $headers = array('Content-Type: application/x-www-form-urlencoded','Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');
 
     //curl_setopt($curl, CURLOPT_POST, true);
@@ -23,7 +24,7 @@
 
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $clienttoken_post);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
     curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
 
