@@ -12,7 +12,7 @@
 
     $curl = curl_init($oauth2token_url);
 
-    $data = array('username:user@forth','password:forth#1234','grant_type:password');
+    $data = array('Content-Type: application/x-www-form-urlencoded','username:user@forth','password:forth#1234','grant_type:password');
     $headers = array('Content-Type: application/x-www-form-urlencoded','Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');
 
     //curl_setopt($curl, CURLOPT_POST, true);
