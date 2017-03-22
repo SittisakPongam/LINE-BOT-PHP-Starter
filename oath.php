@@ -46,6 +46,8 @@ function getVehicleStatus($replyToken)
 
 			$authorization = "Authorization: Bearer ". $access_token;
 
+			echo $authorization;
+
             $curl = curl_init($url);
 
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
