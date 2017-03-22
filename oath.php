@@ -5,8 +5,7 @@
     $oauth2token_url = "https://webapi.forthtrack.com/authorizationserver11/token";
     $clienttoken_post = array(
     "username" => "user@forth",
-    "password" => "forth#1234",
-    "Content-Type" => "application/x-www-form-urlencoded",
+    "password" => "forth#1234",    
     "grant_type" => "password"
     );
 
@@ -24,7 +23,7 @@
 
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $clienttoken_post);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
     curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
 
