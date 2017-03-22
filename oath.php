@@ -46,18 +46,13 @@ function getVehicleStatus($replyToken)
 
 			$access_token = $_COOKIE["accessToken"];
 
-			$headers = array('Content-Type: application/x-www-form-urlencoded','Authorization: Bearer U7FewLN_sW0xRUM_w1aaQDx-A7f-knft4uvMAEj0HPBTDzdUwch3Ure0OITLwBbna2rCmEvk8lzhOYScnCAVGsPdfwgtdW8R3S8BQ9DKhX036gBCnBe_k3FBhUFF_ubt8j6WBDyh-9pwpDLiEANpQxgQ95HbvKqdOFI0Wxl2ap2JqLm2xrpOjF6LSQSdsRHDljWhm3owN_VIjHdj4sy_V1EGXEOKLAuSJIvmbS3wU1d2kHKxwVtF48OAwhpEG02ZrNkocA');  
-
-			echo $headers[0];
-			echo $headers[1];
+			$authorization = "Authorization: Bearer U7FewLN_sW0xRUM_w1aaQDx-A7f-knft4uvMAEj0HPBTDzdUwch3Ure0OITLwBbna2rCmEvk8lzhOYScnCAVGsPdfwgtdW8R3S8BQ9DKhX036gBCnBe_k3FBhUFF_ubt8j6WBDyh-9pwpDLiEANpQxgQ95HbvKqdOFI0Wxl2ap2JqLm2xrpOjF6LSQSdsRHDljWhm3owN_VIjHdj4sy_V1EGXEOKLAuSJIvmbS3wU1d2kHKxwVtF48OAwhpEG02ZrNkocA";
 
             $curl = curl_init($url);
 
-            echo $curl;
-
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
 	        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $header);    
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $authorization);    
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);         
             $result = curl_exec($curl);
             curl_close($curl);
