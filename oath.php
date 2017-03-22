@@ -50,7 +50,7 @@ function getVehicleStatus($replyToken)
 
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
 	        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
+            //curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);         
             $result = curl_exec($curl);
             curl_close($curl);
