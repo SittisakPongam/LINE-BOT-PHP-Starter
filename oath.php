@@ -22,12 +22,12 @@
     //curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
     //curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
-    //curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
-	//curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    //curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-    //curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-    //curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
-    //curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
 
     $json_response = curl_exec($curl);
 
