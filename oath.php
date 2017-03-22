@@ -48,10 +48,12 @@ function getVehicleStatus($replyToken)
 
 			$headers = array('Content-Type: application/x-www-form-urlencoded','Authorization: Bearer U7FewLN_sW0xRUM_w1aaQDx-A7f-knft4uvMAEj0HPBTDzdUwch3Ure0OITLwBbna2rCmEvk8lzhOYScnCAVGsPdfwgtdW8R3S8BQ9DKhX036gBCnBe_k3FBhUFF_ubt8j6WBDyh-9pwpDLiEANpQxgQ95HbvKqdOFI0Wxl2ap2JqLm2xrpOjF6LSQSdsRHDljWhm3owN_VIjHdj4sy_V1EGXEOKLAuSJIvmbS3wU1d2kHKxwVtF48OAwhpEG02ZrNkocA');  
 
-			echo $header[0];
-			echo $header[1];
+			echo $headers[0];
+			echo $headers[1];
 
             $curl = curl_init($url);
+
+            echo $curl;
 
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
 	        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
