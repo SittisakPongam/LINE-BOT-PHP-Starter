@@ -44,13 +44,13 @@ function getVehicleStatus($replyToken)
      // Make a POST Request to Messaging API to reply to sender
 			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/1111111';
 
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$authorization = "Authorization: Bearer ". $access_token;
 
             $curl = curl_init($url);
 
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
 	        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            //curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $authorization);    
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);         
             $result = curl_exec($curl);
             curl_close($curl);
