@@ -44,6 +44,8 @@ function getVehicleStatus($replyToken)
      // Make a POST Request to Messaging API to reply to sender
 			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/1111111';
 
+			$access_token = $_COOKIE["accessToken"];
+
 			$authorization = "Authorization: Bearer ". $access_token;
 
 			echo $authorization;
