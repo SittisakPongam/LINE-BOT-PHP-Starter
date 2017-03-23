@@ -4,8 +4,6 @@ require("webapi.php");
 require("verify.php");
 
 
-$access_token = 'ZHAE6XhjkeKgKkR1C/Y3Hw3n4yPxS8ByGY11+u5IhI5Z8W4Tr+ytOwT5UD+B4x4CsDMa8r1jcrbZ12sSb1ptmwRwjwvff4i82FpwIAyzYXkcMoIZVsSOmp+0FROf5wd48Bz4Ztycfk5vYJosSKjI7AdB04t89/1O/w1cDnyilFU=';
-
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -30,7 +28,9 @@ if (!is_null($events['events'])) {
 				'text' => $text.$replyToken.$userId
 			];
 
-			
+	*/		
+
+			/*
 
 $access_token="1111";
 
@@ -55,7 +55,7 @@ $access_token="1111";
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$access_token
+				'text' => $text.$_COOKIE["accessToken"];
 			];
 			
 

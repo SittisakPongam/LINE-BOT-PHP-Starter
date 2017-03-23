@@ -39,14 +39,12 @@
 }
 
 
-function getVehicleStatus($access_token,$replyToken)
+function getVehicleStatus($replyToken)
 {
      // Make a POST Request to Messaging API to reply to sender
 			$url = 'https://webapi.forthtrack.com/trackingresource/api/lineAll/1111111';
 
-			$access_token = $access_token;// $_COOKIE["accessToken"];
-
-			$authorization = "Authorization: Bearer U7FewLN_sW0xRUM_w1aaQDx-A7f-knft4uvMAEj0HPBTDzdUwch3Ure0OITLwBbna2rCmEvk8lzhOYScnCAVGsPdfwgtdW8R3S8BQ9DKhX036gBCnBe_k3FBhUFF_ubt8j6WBDyh-9pwpDLiEANpQxgQ95HbvKqdOFI0Wxl2ap2JqLm2xrpOjF6LSQSdsRHDljWhm3owN_VIjHdj4sy_V1EGXEOKLAuSJIvmbS3wU1d2kHKxwVtF48OAwhpEG02ZrNkocA";
+			$access_token = $_COOKIE["accessToken"];
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer ' . $access_token);
