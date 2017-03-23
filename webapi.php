@@ -59,16 +59,4 @@ function getVehicleStatus($replyToken)
 			echo $result . "\r\n";
 }
 
-
-
-if(!isset($_COOKIE["accessToken"])) {
-    echo get_oauth2_token();
-} 
-
-if($_COOKIE["accessToken"] != "")
-{
-	getVehicleStatus(1111);
-}
-
-
 ?>

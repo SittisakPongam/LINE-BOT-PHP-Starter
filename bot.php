@@ -4,7 +4,6 @@ require("webapi.php");
 require("verify.php");
 
 
-
 $access_token = 'ZHAE6XhjkeKgKkR1C/Y3Hw3n4yPxS8ByGY11+u5IhI5Z8W4Tr+ytOwT5UD+B4x4CsDMa8r1jcrbZ12sSb1ptmwRwjwvff4i82FpwIAyzYXkcMoIZVsSOmp+0FROf5wd48Bz4Ztycfk5vYJosSKjI7AdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
@@ -27,6 +26,20 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text
 			];
+
+
+	/*		if(!isset($_COOKIE["accessToken"])) {
+    echo get_oauth2_token();
+} 
+
+if($_COOKIE["accessToken"] != "")
+{
+	getVehicleStatus(1111);
+}
+
+*/
+
+echo getUserId($replyToken);
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
