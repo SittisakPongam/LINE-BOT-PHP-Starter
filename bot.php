@@ -24,22 +24,25 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
+			global $messages = [
 				'type' => 'text',
 				'text' => $text.$replyToken.$userId
 			];
 
 
-	/*		if(!isset($_COOKIE["accessToken"])) {
-    echo get_oauth2_token();
-} 
+			if(!isset($_COOKIE["accessToken"])) {
+                    get_oauth2_token();
+              } 
 
 if($_COOKIE["accessToken"] != "")
 {
-	getVehicleStatus(1111);
+	global $messages = [
+				'type' => 'text',
+				'text' => getVehicleStatus(1111)
+			];
 }
 
-*/
+
 
 //echo $replyToken;
 
