@@ -27,7 +27,7 @@ if (!is_null($events['events'])) {
 
 			$accessToken = get_oauth2_token();
 
-            $result_webapi = getVehicleStatus($accessToken,$userId);
+            $result_webapi = getVehicleStatus($accessToken);
 			
 			 $messages = [
 				'type' => 'text',
@@ -63,7 +63,7 @@ echo "OK";
 
 $accessToken = get_oauth2_token();
 
-$result_webapi = getVehicleStatus($accessToken,'1234');
+$result_webapi = getVehicleStatus($accessToken);
 
 echo $result_webapi;
 
