@@ -17,8 +17,6 @@
 
     $json_response = curl_exec($curl);
 
-    echo $json_response;
-
     curl_close($curl);
 
     $authObj = json_decode($json_response);
