@@ -55,7 +55,7 @@ $access_token="1111";
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$_COOKIE["accessToken"];
+				'text' => $text.$_COOKIE["accessToken"]
 			];
 			
 
