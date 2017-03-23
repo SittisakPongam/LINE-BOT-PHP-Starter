@@ -49,13 +49,13 @@ $access_token="1111";
 
 */
 
-$myText = getVehicleStatus($access_token,'1111');
+//$myText = getVehicleStatus($access_token,'1111');
 
 
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$myText
+				'text' => $text.$access_token
 			];
 			
 
