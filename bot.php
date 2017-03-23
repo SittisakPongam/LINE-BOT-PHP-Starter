@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
                     get_oauth2_token();
               } 
 
-$nofity="";
+$nofity="1111";
 
 if($_COOKIE["accessToken"] != "")
 {
@@ -50,7 +50,7 @@ if($_COOKIE["accessToken"] != "")
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$replyToken.$userId
+				'text' => $text.$nofity
 			];
 			
 
