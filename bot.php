@@ -24,46 +24,14 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			/*
+			
 			 $messages = [
 				'type' => 'text',
 				'text' => $text.$replyToken.$userId
 			];
 
 			
-
-$access_token="1111";
-
-			if(!isset($_COOKIE["accessToken"])) {				
-                    $access_token = get_oauth2_token();
-              } 
-
-*/
-
-/*if($_COOKIE["accessToken"] != "")
-{
-	$nofity= $_COOKIE["accessToken"];
-	$nofity = getVehicleStatus(1111);
-	 
-}
-
-*/
-
-$access_token =get_oauth2_token();
-
-$myText = getVehicleStatus($access_token,$userId);
-
-
-
-$messages = [
-				'type' => 'text',
-				'text' => $text.$myText.$access_token
-			];
 			
-
-//echo $replyToken;
-
-//echo getUserId($replyToken);
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
