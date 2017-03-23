@@ -49,13 +49,13 @@ $access_token="1111";
 
 */
 
-$myText = getVehicleStatus(get_oauth2_token(),'1111');
+$myText = getVehicleStatus(get_oauth2_token(),$userId);
 
 
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$myText
+				'text' => $text.$userId
 			];
 			
 
