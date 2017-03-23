@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 				'text' => $text.$replyToken.$userId
 			];
 
-			*/
+			
 
 $access_token="1111";
 
@@ -38,7 +38,7 @@ $access_token="1111";
                     $access_token = get_oauth2_token();
               } 
 
-
+*/
 
 /*if($_COOKIE["accessToken"] != "")
 {
