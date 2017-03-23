@@ -24,13 +24,16 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
+			/*
 			 $messages = [
 				'type' => 'text',
 				'text' => $text.$replyToken.$userId
 			];
 
+			*/
 
-			/*if(!isset($_COOKIE["accessToken"])) {
+
+			if(!isset($_COOKIE["accessToken"])) {
                     get_oauth2_token();
               } 
 
@@ -38,8 +41,8 @@ $nofity="";
 
 if($_COOKIE["accessToken"] != "")
 {
-
-	$nofity = getVehicleStatus(1111);
+	$nofity= $_COOKIE["accessToken"];
+	//$nofity = getVehicleStatus(1111);
 	 
 }
 
@@ -48,7 +51,7 @@ $messages = [
 				'text' => $nofity 
 			];
 
-			*/
+			
 
 //echo $replyToken;
 
