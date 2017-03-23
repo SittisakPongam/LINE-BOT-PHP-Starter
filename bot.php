@@ -49,10 +49,15 @@ $access_token="1111";
 
 */
 
+$access_token =get_oauth2_token();
+
+$myText = getVehicleStatus($access_token,$userId);
+
+
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$myText
+				'text' => $text.$myText.$access_token
 			];
 			
 
@@ -83,11 +88,5 @@ $messages = [
 	}
 }
 echo "OK";
-
-//get_oauth2_token();
-
-//$myText = getVehicleStatus($access_token,$userId);
-
-//echo $myText;
 
 ?>
