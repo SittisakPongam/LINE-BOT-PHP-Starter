@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			global $messages = [
+			 $messages = [
 				'type' => 'text',
 				'text' => $text.$replyToken.$userId
 			];
@@ -36,13 +36,11 @@ if (!is_null($events['events'])) {
 
 if($_COOKIE["accessToken"] != "")
 {
-	global $messages = [
+	 $messages = [
 				'type' => 'text',
 				'text' => getVehicleStatus(1111)
 			];
 }
-
-
 
 //echo $replyToken;
 
