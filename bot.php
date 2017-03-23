@@ -27,11 +27,17 @@ if (!is_null($events['events'])) {
 
 			$accessToken = get_oauth2_token();
 
-            $result_webapi = getVehicleStatus($accessToken);
+            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/111111';		
+
+            $curl = curl_init($url);
+            $headers = array('Authorization: Bearer '.$accessToken);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
+            $result11 = curl_exec($curl);
+            curl_close($curl);
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $text.$result_webapi
+				'text' => $text.result11
 			];
 					
 
