@@ -84,7 +84,7 @@ $messages = [
 }
 echo "OK";
 
-$access_token =get_oauth2_token();
+get_oauth2_token();
 
 //$myText = getVehicleStatus($access_token,$userId);
 
