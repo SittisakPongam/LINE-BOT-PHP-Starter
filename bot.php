@@ -34,13 +34,19 @@ if (!is_null($events['events'])) {
                     get_oauth2_token();
               } 
 
+$nofity="";
+
 if($_COOKIE["accessToken"] != "")
 {
-	 $messages = [
-				'type' => 'text',
-				'text' => getVehicleStatus(1111)
-			];
+
+	$nofity = getVehicleStatus(1111);
+	 
 }
+
+$messages = [
+				'type' => 'text',
+				'text' => $nofity 
+			];
 
 //echo $replyToken;
 
