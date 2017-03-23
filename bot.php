@@ -55,7 +55,7 @@ $myText = getVehicleStatus(get_oauth2_token(),$userId);
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$userId
+				'text' => $text.get_oauth2_token()
 			];
 			
 
