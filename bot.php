@@ -59,10 +59,4 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$accessToken = get_oauth2_token();
-
-$result_webapi = getVehicleStatus($accessToken);
-
-echo $result_webapi;
-
 ?>
