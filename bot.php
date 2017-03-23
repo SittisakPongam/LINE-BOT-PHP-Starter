@@ -57,6 +57,8 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-echo get_oauth2_token();
+$accessToken = get_oauth2_token();
+
+echo getVehicleStatus($accessToken,'11111');
 
 ?>
