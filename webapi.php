@@ -40,7 +40,7 @@
 function getVehicleStatus($access_token,$userId)
 {
      // Make a POST Request to Messaging API to reply to sender
-			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
+			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/111111';		
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
