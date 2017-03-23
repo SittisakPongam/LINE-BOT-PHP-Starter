@@ -57,8 +57,6 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
-$accessToken = get_oauth2_token();
-
-echo $accessToken;
+echo get_oauth2_token();
 
 ?>
