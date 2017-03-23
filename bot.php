@@ -46,11 +46,12 @@ if($_COOKIE["accessToken"] != "")
 	 
 }
 
+
+
 $messages = [
 				'type' => 'text',
-				'text' => $nofity 
+				'text' => $text.$replyToken.$userId
 			];
-
 			
 
 //echo $replyToken;
