@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $text.$accessToken
+				'text' => $text.$result_webapi
 			];
 
 			
@@ -60,5 +60,11 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
+
+$accessToken = get_oauth2_token();
+
+$result_webapi = getVehicleStatus($accessToken,$userId);
+
+echo $result_webapi;
 
 ?>
