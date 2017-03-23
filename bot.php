@@ -4,6 +4,8 @@ require("webapi.php");
 require("verify.php");
 
 
+$line_access_token = 'ZHAE6XhjkeKgKkR1C/Y3Hw3n4yPxS8ByGY11+u5IhI5Z8W4Tr+ytOwT5UD+B4x4CsDMa8r1jcrbZ12sSb1ptmwRwjwvff4i82FpwIAyzYXkcMoIZVsSOmp+0FROf5wd48Bz4Ztycfk5vYJosSKjI7AdB04t89/1O/w1cDnyilFU=';
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -22,15 +24,13 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			
+			/*
 			 $messages = [
 				'type' => 'text',
 				'text' => $text.$replyToken.$userId
 			];
 
 			
-
-			/*
 
 $access_token="1111";
 
@@ -52,6 +52,13 @@ $access_token="1111";
 //$myText = getVehicleStatus($access_token,'1111');
 
 
+
+$messages = [
+				'type' => 'text',
+				'text' => $text.$_COOKIE["accessToken"]
+			];
+			
+
 //echo $replyToken;
 
 //echo getUserId($replyToken);
@@ -63,7 +70,7 @@ $access_token="1111";
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $line_access_token);
 
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
