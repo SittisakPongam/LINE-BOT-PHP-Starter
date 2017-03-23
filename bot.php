@@ -36,7 +36,7 @@ $nofity="1111";
 
 			if(!isset($_COOKIE["accessToken"])) {
 				$nofity="2222";
-                    get_oauth2_token();
+                    $nofity = get_oauth2_token();
               } 
 
 
