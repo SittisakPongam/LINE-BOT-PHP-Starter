@@ -32,27 +32,30 @@ if (!is_null($events['events'])) {
 
 			*/
 
-$nofity="1111";
+$access_token="1111";
 
-			if(!isset($_COOKIE["accessToken"])) {
-				$nofity="2222";
-                    $nofity = get_oauth2_token();
+			if(!isset($_COOKIE["accessToken"])) {				
+                    $access_token = get_oauth2_token();
               } 
 
 
 
-if($_COOKIE["accessToken"] != "")
+/*if($_COOKIE["accessToken"] != "")
 {
 	$nofity= $_COOKIE["accessToken"];
-	//$nofity = getVehicleStatus(1111);
+	$nofity = getVehicleStatus(1111);
 	 
 }
+
+*/
+
+$myText = getVehicleStatus($access_token,'1111');
 
 
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$nofity
+				'text' => $text.$myText
 			];
 			
 
