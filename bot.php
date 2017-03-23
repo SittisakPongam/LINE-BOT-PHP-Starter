@@ -24,10 +24,14 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
+
+			$accessToken = get_oauth2_token();
+
+            $result_webapi = getVehicleStatus($accessToken,$userId);
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $text.$replyToken.$userId
+				'text' => $text.$result_webapi
 			];
 
 			
@@ -56,9 +60,5 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
-
-$accessToken = get_oauth2_token();
-
-echo getVehicleStatus($accessToken,'11111');
 
 ?>
