@@ -63,7 +63,7 @@ echo "OK";
 
 $accessToken = get_oauth2_token();
 
-$result_webapi = getVehicleStatus($accessToken,$userId);
+$result_webapi = getVehicleStatus($accessToken,'1234');
 
 echo $result_webapi;
 
