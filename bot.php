@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $text.result11
+				'text' => $text.$result11
 			];
 					
 
