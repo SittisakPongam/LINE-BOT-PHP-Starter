@@ -57,7 +57,7 @@ $myText = getVehicleStatus($access_token,$userId);
 
 $messages = [
 				'type' => 'text',
-				'text' => $text.$myText.$access_token
+				'text' => $text.$myText
 			];
 			
 
