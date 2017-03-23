@@ -43,7 +43,7 @@ function getVehicleStatus($access_token,$userId)
 			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/.'$userId;			
 
             $curl = curl_init($url);
-            $headers = array('Authorization: Bearer RDQmWHPItY0M6D-G5care1yTmsI2IW_jLAoK0VMLensRzcx1xtX1lGhKnw5dPFlnizg9EXCSl-WNLLGUS2qx0jSMIPr5Q1vy0W947NX4xiGiLssc_LyryNG4_9O67Dsc83gKeeQi4CMeJCAsA7qRJzxQNwjiNpU5sGX9NqrnKC6FFvbuk64F4uw3ZH755qY1YZJdzD9ZT-_Z6j8N7Fipc7z_gGjw-x4hzF2JoYTOqe_f1XI_0Wxt7M3ib5hUPIC5-nymLw');
+            $headers = array('Authorization: Bearer '.$access_token);
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
             $result = curl_exec($curl);
             curl_close($curl);
