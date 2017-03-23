@@ -39,6 +39,8 @@ if($_COOKIE["accessToken"] != "")
 
 */
 
+echo $replyToken;
+
 echo getUserId($replyToken);
 
 			// Make a POST Request to Messaging API to reply to sender
