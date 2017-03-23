@@ -42,7 +42,7 @@
 function getVehicleStatus($replyToken)
 {
      // Make a POST Request to Messaging API to reply to sender
-			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/1111111';
+			$url = 'https://webapi.forthtrack.com/trackingresource/api/lineAll/1111111';
 
 			$access_token = $_COOKIE["accessToken"];
 
