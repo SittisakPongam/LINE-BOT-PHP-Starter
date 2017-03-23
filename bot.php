@@ -22,13 +22,13 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			/*
+			
 			 $messages = [
 				'type' => 'text',
 				'text' => $text.$replyToken.$userId
 			];
 
-	*/		
+			
 
 			/*
 
@@ -51,13 +51,6 @@ $access_token="1111";
 
 //$myText = getVehicleStatus($access_token,'1111');
 
-
-
-$messages = [
-				'type' => 'text',
-				'text' => $userId
-			];
-			
 
 //echo $replyToken;
 
