@@ -32,12 +32,14 @@ if (!is_null($events['events'])) {
 
 			*/
 
+$nofity="1111";
 
 			if(!isset($_COOKIE["accessToken"])) {
+				$nofity="2222";
                     get_oauth2_token();
               } 
 
-$nofity="1111";
+
 
 if($_COOKIE["accessToken"] != "")
 {
