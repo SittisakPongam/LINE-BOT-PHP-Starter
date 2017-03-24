@@ -35,7 +35,7 @@
 
     $text = getVehicleStatus($accessToken,$userId);
 
-    return  $accessToken.$text;// 
+    return  $text;// 
 }
 
 
