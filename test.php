@@ -36,7 +36,13 @@ function get_oauth2_token($userId) {
     return  $accessToken;// 
 }
 
+
+function getVehicleStatus($userId)
+{
+
 $access_token = get_oauth2_token('');
+
+
 
 
 $url = 'https://webapi.forthtrack.com/trackingresource/api/line/1111';		
@@ -50,6 +56,9 @@ $url = 'https://webapi.forthtrack.com/trackingresource/api/line/1111';
             //$obj = json_decode($result);	
 
 			return $result;
+}
+
+echo getVehicleStatus();
 
 
 ?>
