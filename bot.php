@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $obj.$urlAPI
+				'text' => $obj.$accessToken
 			];
 					
 
