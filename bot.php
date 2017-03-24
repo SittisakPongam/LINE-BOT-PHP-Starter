@@ -130,6 +130,9 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK";
+
+ $myText = test('');
+
+echo $myText;
 
 ?>
