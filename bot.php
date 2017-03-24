@@ -43,16 +43,14 @@ function gettoken($userId) {
 function test($userId)
 {
 
-$access_token = gettoken('');
+            $access_token = gettoken('');
 
-
-$url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';		
+            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';		
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers); 
-            //curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);   
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);   
             $result = curl_exec($curl);
             curl_close($curl);
 
