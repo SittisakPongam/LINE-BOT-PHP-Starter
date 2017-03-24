@@ -58,7 +58,7 @@ $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';
 
             $obj = json_decode($result,true);	
 
-			return $obj.$access_token;
+			return $result.$access_token;
 }
 
 
