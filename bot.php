@@ -82,7 +82,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$accessToken = get_oauth2_token($userId);
+			//$accessToken = get_oauth2_token($userId);
 
 			/*
 
@@ -97,7 +97,7 @@ if (!is_null($events['events'])) {
             */
 
 
-            $myText = test('');
+            //$myText = test('');
 
 
             //$obj = json_decode($result11);	
