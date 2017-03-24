@@ -66,4 +66,21 @@ if (!is_null($events['events'])) {
 }
 echo "OK";
 
+$accessToken = get_oauth2_token();
+
+            $urlAPI = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
+
+            $curl = curl_init($urlAPI);
+            $authen = array('Authorization: Bearer '.$accessToken);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $authen);    
+            $result11 = curl_exec($curl);
+            curl_close($curl);
+
+            $obj = json_decode($result11);	
+			
+			 $messages = [
+				'type' => 'text',
+				'text' => $obj.$urlAPI
+			];
+
 ?>
