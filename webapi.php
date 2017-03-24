@@ -33,7 +33,7 @@
     setcookie("accessToken", $accessToken, time() + (86400 * 30), "/"); // 86400 = 1 day
     setcookie("refreshToken", $refreshToken, time() + (86400 * 30), "/"); // 86400 = 1 day
 
-    return  $accessToken;// getVehicleStatus($access_token,$userId)
+    return getVehicleStatus($accessToken,$userId)
 }
 
 
