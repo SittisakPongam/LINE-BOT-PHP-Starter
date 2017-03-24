@@ -52,9 +52,7 @@ function getVehicleStatus($access_token,$userId)
 
             $obj = json_decode($result);	
 
-             $boxId = $obj->boxId;		
-
-			return $boxId;
+			return $obj;
 }
 
 
