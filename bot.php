@@ -50,7 +50,8 @@ $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);    
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers); 
+            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);   
             $result = curl_exec($curl);
             curl_close($curl);
 
@@ -81,26 +82,9 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			// Build message to reply back
-			//$accessToken = get_oauth2_token($userId);
-
-			/*
-
-            $urlAPI = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
-
-            $curl = curl_init($urlAPI);
-            $authen = array('Authorization: Bearer '.$accessToken);
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $authen);    
-            $result11 = curl_exec($curl);
-            curl_close($curl);
-
-            */
-
 
             $myText = test('');
 
-
-            //$obj = json_decode($result11);	
 			
 			 $messages = [
 				'type' => 'text',
