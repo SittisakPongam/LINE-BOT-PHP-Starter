@@ -36,7 +36,7 @@ if (!is_null($events['events'])) {
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $text.$userId.$result11.$accessToken
+				'text' => $text.$userId.$result11.$authen[0]
 			];
 					
 
