@@ -50,9 +50,9 @@ function getVehicleStatus($access_token,$userId)
             $result = curl_exec($curl);
             curl_close($curl);
 
-            $obj = json_decode($result);	
+            //$obj = json_decode($result);	
 
-			return $obj;
+			return $result;
 }
 
 
