@@ -1,6 +1,6 @@
 <?php
 
-	function get_oauth2_token() {
+	function get_oauth2_token($userId) {
 
     $oauth2token_url = "https://webapi.forthtrack.com/authorizationserver/token";
 
@@ -33,14 +33,14 @@
     setcookie("accessToken", $accessToken, time() + (86400 * 30), "/"); // 86400 = 1 day
     setcookie("refreshToken", $refreshToken, time() + (86400 * 30), "/"); // 86400 = 1 day
 
-    return $accessToken;
+    return getVehicleStatus($access_token,$userId)
 }
 
 
-function getVehicleStatus($access_token)
+function getVehicleStatus($access_token,$userId)
 {
      // Make a POST Request to Messaging API to reply to sender
-			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/111111';		
+			$url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
