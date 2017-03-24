@@ -24,7 +24,9 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$accessToken = get_oauth2_token();
+			$accessToken = get_oauth2_token($userId);
+
+			/*
 
             $urlAPI = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
 
@@ -34,11 +36,13 @@ if (!is_null($events['events'])) {
             $result11 = curl_exec($curl);
             curl_close($curl);
 
+            */
+
             $obj = json_decode($result11);	
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $obj.$accessToken
+				'text' => $text.$accessToken
 			];
 					
 
