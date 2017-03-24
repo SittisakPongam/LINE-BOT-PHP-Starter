@@ -33,10 +33,12 @@ if (!is_null($events['events'])) {
             curl_setopt($curl, CURLOPT_HTTPHEADER, $authen);    
             $result11 = curl_exec($curl);
             curl_close($curl);
+
+            $obj = json_decode($result11);	
 			
 			 $messages = [
 				'type' => 'text',
-				'text' => $result11
+				'text' => $obj
 			];
 					
 
