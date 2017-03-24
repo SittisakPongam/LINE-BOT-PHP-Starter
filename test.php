@@ -56,7 +56,9 @@ $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';
 			return $obj;
 }
 
-echo getVehicleStatus('');
+$result = getVehicleStatus('');
+
+echo $result;
 
 
 ?>
