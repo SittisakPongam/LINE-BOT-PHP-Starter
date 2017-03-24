@@ -53,4 +53,9 @@ function getVehicleStatus($access_token)
 			echo $result . "\r\n";
 }
 
+
+$accessToken = get_oauth2_token();
+
+echo getVehicleStatus($accessToken);
+
 ?>
