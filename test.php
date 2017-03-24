@@ -56,9 +56,9 @@ $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';
 			return $obj;
 }
 
-$result = test('');
+//$result = test('');
 
-echo $result;
+//echo $result;
 
 
 ?>
