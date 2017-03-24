@@ -68,6 +68,8 @@ echo "OK";
 
 $accessToken = get_oauth2_token();
 
+echo $accessToken;
+
             $urlAPI = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
 
             $curl = curl_init($urlAPI);
