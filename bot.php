@@ -97,7 +97,7 @@ if (!is_null($events['events'])) {
             */
 
 
-            //$myText = test('');
+            $myText = test('');
 
 
             //$obj = json_decode($result11);	
