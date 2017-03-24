@@ -50,6 +50,7 @@ $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers); 
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);   
             $result = curl_exec($curl);
