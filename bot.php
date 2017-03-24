@@ -78,6 +78,6 @@ $accessToken = get_oauth2_token();
 
             $obj = json_decode($result11);	
 			
-			echo $obj;
+			echo $obj.$urlAPI.$result11;
 
 ?>
