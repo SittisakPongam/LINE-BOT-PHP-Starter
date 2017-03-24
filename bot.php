@@ -78,9 +78,6 @@ $accessToken = get_oauth2_token();
 
             $obj = json_decode($result11);	
 			
-			 $messages = [
-				'type' => 'text',
-				'text' => $obj.$urlAPI
-			];
+			echo $obj;
 
 ?>
