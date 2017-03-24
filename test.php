@@ -1,4 +1,4 @@
-<?
+<?php
 
 function get_oauth2_token($userId) {
 
