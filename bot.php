@@ -45,7 +45,7 @@ function test($userId)
 
             $access_token = gettoken('');
 
-            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/222222';		
+            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
@@ -53,8 +53,6 @@ function test($userId)
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);   
             $result = curl_exec($curl);
             curl_close($curl);
-
-            $obj = json_decode($result,true);	
 
 			return $result;
 }
