@@ -50,7 +50,7 @@ function getVehicleStatus($access_token,$userId)
 
             //$obj = json_decode($result);			
 
-			echo $result . "\r\n";
+			return $result . "\r\n";
 }
 
 
