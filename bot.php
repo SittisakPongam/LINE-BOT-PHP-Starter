@@ -80,7 +80,9 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 
-            $myText = getWepAPI('l'.$userId,$text);
+            $userId ='l'.$userId;
+
+            $myText = getWepAPI($userId,$text);
 
 			
 			 $messages = [
