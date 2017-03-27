@@ -84,6 +84,8 @@ if (!is_null($events['events'])) {
 
             $myText = getWepAPI($userId,$text);
 
+            //set reply text format
+
 			
 			 $messages = [
 				'type' => 'text',
