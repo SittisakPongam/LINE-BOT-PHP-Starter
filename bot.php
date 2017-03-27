@@ -40,12 +40,12 @@ function gettoken($userId) {
 }
 
 
-function test($userId)
+function getWepAPI($userId,$boxId)
 {
 
             $access_token = gettoken('');
 
-            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId;		
+            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId.'/'.$boxId;		
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 
-            $myText = test('');
+            $myText = getWepAPI($userId);
 
 			
 			 $messages = [
