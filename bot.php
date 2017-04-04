@@ -103,7 +103,7 @@ if (!is_null($events['events'])) {
             'label' => 'No',
             'text' => 'no'          
       ]
-  ]
+  ];
 
 
             //set reply text format
