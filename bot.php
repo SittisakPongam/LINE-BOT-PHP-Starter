@@ -85,7 +85,9 @@ if (!is_null($events['events'])) {
 
             $myText = getWepAPI($userId,$text);
 
+/*
             //set reply text format
+
 
 
             $action1 =[
@@ -113,6 +115,8 @@ if (!is_null($events['events'])) {
 				'altText' => 'this is a buttons template',
 				'template' => $template
 			];
+
+			*/
 
 /*
 {
@@ -144,13 +148,13 @@ if (!is_null($events['events'])) {
 }
 */
 
-		/*	
+			
 			 $messages = [
 				'type' => 'text',
 				'text' => $myText
 			];
 
-			*/
+			
 					
 
 			// Make a POST Request to Messaging API to reply to sender
