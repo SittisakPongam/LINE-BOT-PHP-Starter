@@ -176,26 +176,13 @@ if (!is_null($events['events'])) {
 }
 */
 
-			/*
+			
 			 $messages = [
 				'type' => 'text',
 				'text' => 'hello'
 			];
 
-			*/
-
-			$messages = array(
-          
-            'type' => 'message',
-            'label' => 'Yes',
-            'text' => 'yes'
-          ,
-          
-            'type' =>'message',
-            'label' => 'No',
-            'text' => 'no'          
-      );
-
+			
 						
 					
 
