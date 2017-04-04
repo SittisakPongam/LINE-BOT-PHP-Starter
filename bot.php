@@ -196,7 +196,7 @@ if (!is_null($events['events'])) {
 
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$confirm],
 			];
 
 			$post = json_encode($data);
