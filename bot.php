@@ -83,6 +83,7 @@ if (!is_null($events['events'])) {
 
 
 
+/*
             $myText = getWepAPI($userId,$text);
 
 			
@@ -90,6 +91,14 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $myText
 			];
+
+*/
+
+			$messages =[
+			 'type' => 'image',
+    'originalContentUrl' => 'https://example.com/original.jpg',
+    'previewImageUrl' => 'https://example.com/preview.jpg'
+			]
 								
 
 			// Make a POST Request to Messaging API to reply to sender
