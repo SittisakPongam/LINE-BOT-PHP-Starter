@@ -83,7 +83,7 @@ if (!is_null($events['events'])) {
 
 
 
-            $myText = getWepAPI($userId,$text);
+        //    $myText = getWepAPI($userId,$text);
 
 
             //set reply text format
@@ -112,7 +112,7 @@ if (!is_null($events['events'])) {
                       'actions' => [$action1]
             ];
 
-             $test = [
+             $messages = [
 				'type' => 'template',
 				'altText' => 'this is a buttons template',
 				'template' => [$template]
@@ -152,11 +152,12 @@ if (!is_null($events['events'])) {
 }
 */
 
-			
+			/*
 			 $messages = [
 				'type' => 'text',
 				'text' => $myText
 			];
+			*/
 
 			
 					
