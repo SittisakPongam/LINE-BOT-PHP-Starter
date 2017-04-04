@@ -85,7 +85,7 @@ if (!is_null($events['events'])) {
 
             $myText = getWepAPI($userId,$text);
 
-/*
+
             //set reply text format
 
 
@@ -107,16 +107,16 @@ if (!is_null($events['events'])) {
                       'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
                       'title' => 'Menu',
                       'text' => 'Please select',
-                      'actions' => [$action1,$action2]
+                      'actions' => [$action1]
             ]
 
              $messages = [
 				'type' => 'template',
 				'altText' => 'this is a buttons template',
-				'template' => $template
+				'template' => [$template]
 			];
 
-			*/
+			
 
 /*
 {
