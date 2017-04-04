@@ -83,12 +83,32 @@ if (!is_null($events['events'])) {
 
 
 
-            $myText = getWepAPI($userId,$text);
+           // $myText = getWepAPI($userId,$text);
+
+
+         $confirm=[  
+  'type' => 'template',
+  'altText' => 'this is a confirm template',
+  'template' =>[ 
+      'type' => 'confirm',
+      'text' => 'Are you sure?',
+      'actions' => [
+          
+            'type' => 'message',
+            'label' => 'Yes',
+            'text' => 'yes'
+          ,
+          
+            'type' =>'message',
+            'label' => 'No',
+            'text' => 'no'          
+      ]
+  ]
 
 
             //set reply text format
 
-
+/*
 
             $action1 =[
             		'type'  =>'postback',
@@ -121,9 +141,8 @@ if (!is_null($events['events'])) {
 				'template' => [$template]
 			];
 
-			
-
-			
+	*/
+		
 
 /*
 {
@@ -170,7 +189,7 @@ if (!is_null($events['events'])) {
 
 			$data = [
 				'replyToken' => $replyToken,
-				'template' => [$myStr],
+				'messaages' => [$confirm],
 			];
 
 			$post = json_encode($data);
