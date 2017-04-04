@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
                       'actions' => [$action1]
             ];
 
-            /*
+            
 
              $myStr = [
 				'type' => 'template',
@@ -121,7 +121,7 @@ if (!is_null($events['events'])) {
 				'template' => [$template]
 			];
 
-	*/		
+			
 
 			
 
