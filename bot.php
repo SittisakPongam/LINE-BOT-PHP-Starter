@@ -104,6 +104,7 @@ if (!is_null($events['events'])) {
                     'data' => 'list'
             ];
 
+/*
             $template = [
                       'type' => 'buttons',
                       'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
@@ -112,13 +113,13 @@ if (!is_null($events['events'])) {
                       'actions' => [$action1,$action2]
             ];
 
-             $test = [
+             $myStr = [
 				'type' => 'template',
 				'altText' => 'this is a buttons template',
 				'template' => [$template]
 			];
 
-			
+	*/		
 
 			
 
