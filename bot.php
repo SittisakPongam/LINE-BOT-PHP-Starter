@@ -107,7 +107,7 @@ if (!is_null($events['events'])) {
 
             $template = [
                       'type' => 'buttons',
-                      'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
+                     //'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
                       'title' => 'Menu',
                       'text' => 'Please select',
                       'actions' => [$action1]
