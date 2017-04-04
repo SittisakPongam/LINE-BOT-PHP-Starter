@@ -79,18 +79,78 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-
             $userId ='l'.$userId;
+
+
 
             $myText = getWepAPI($userId,$text);
 
             //set reply text format
 
-			
+
+            $action1 =[
+            		'type'  =>'postback',
+                    'label' =>'Check',
+                    'data' => 'check'
+            ]
+
+            $action2 =[
+            		'type'  =>'postback',
+                    'label' =>'List',
+                    'data' => 'list'
+            ]
+
+            $template = [
+                      'type' => 'buttons',
+                      'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
+                      'title' => 'Menu',
+                      'text' => 'Please select',
+                      'actions' => [$action1,$action2]
+            ]
+
+             $messages = [
+				'type' => 'template',
+				'altText' => 'this is a buttons template',
+				'template' => $template
+			];
+
+/*
+{
+  "type": "template",
+  "altText": "this is a buttons template",
+  "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+      "title": "Menu",
+      "text": "Please select",
+      "actions": [
+          {
+            "type": "postback",
+            "label": "Buy",
+            "data": "action=buy&itemid=123"
+          },
+          {
+            "type": "postback",
+            "label": "Add to cart",
+            "data": "action=add&itemid=123"
+          },
+          {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "http://example.com/page/123"
+          }
+      ]
+  }
+}
+*/
+
+		/*	
 			 $messages = [
 				'type' => 'text',
 				'text' => $myText
 			];
+
+			*/
 					
 
 			// Make a POST Request to Messaging API to reply to sender
