@@ -109,10 +109,10 @@ if (!is_null($events['events'])) {
                       'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
                       'title' => 'Menu',
                       'text' => 'Please select',
-                      'actions' => [$action1]
+                      'actions' => [$action1,$action2]
             ];
 
-             $messages = [
+             $test = [
 				'type' => 'template',
 				'altText' => 'this is a buttons template',
 				'template' => [$template]
@@ -152,22 +152,24 @@ if (!is_null($events['events'])) {
 }
 */
 
-			/*
+			
 			 $messages = [
 				'type' => 'text',
-				'text' => $myText
+				'text' => $test
 			];
-			*/
+			
 
 			
 					
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
+
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
+
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $line_access_token);
 
