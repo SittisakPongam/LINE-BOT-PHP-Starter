@@ -176,19 +176,15 @@ if (!is_null($events['events'])) {
 }
 */
 
-			
+			/*
 			 $messages = [
 				'type' => 'text',
 				'text' => 'hello'
 			];
 
-			$confirm=[  
-  'type' => 'template',
-  'altText' => 'this is a confirm template',
-  'template' => [ 
-      'type' => 'confirm',
-      'text' => 'Are you sure?',
-      'actions' => array(
+			*/
+
+			$messages = array(
           
             'type' => 'message',
             'label' => 'Yes',
@@ -198,12 +194,9 @@ if (!is_null($events['events'])) {
             'type' =>'message',
             'label' => 'No',
             'text' => 'no'          
-      )
-  ]  
-  ];
-			
+      );
 
-			
+						
 					
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -211,7 +204,7 @@ if (!is_null($events['events'])) {
 
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$confirm],
+				'messages' => $messages,
 			];
 
 			$post = json_encode($data);
