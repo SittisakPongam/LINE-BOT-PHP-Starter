@@ -96,6 +96,8 @@ if (!is_null($events['events'])) {
                     'data' => 'check'
             ]
 
+            /*
+
             $action2 =[
             		'type'  =>'postback',
                     'label' =>'List',
@@ -115,6 +117,8 @@ if (!is_null($events['events'])) {
 				'altText' => 'this is a buttons template',
 				'template' => [$template]
 			];
+
+			*/
 
 			
 
