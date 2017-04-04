@@ -155,12 +155,12 @@ if (!is_null($events['events'])) {
 }
 */
 
-			
+			/*
 			 $messages = [
 				'type' => 'text',
 				'text' => $myStr
 			];
-			
+			*/
 
 			
 					
@@ -170,7 +170,7 @@ if (!is_null($events['events'])) {
 
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$myStr],
+				'template' => [$myStr],
 			];
 
 			$post = json_encode($data);
