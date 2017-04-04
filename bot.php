@@ -94,10 +94,10 @@ if (!is_null($events['events'])) {
 
 */
 
-			$messages =[
+			$messages = [
 			 'type' => 'image',
-    'originalContentUrl' => 'https://example.com/original.jpg',
-    'previewImageUrl' => 'https://example.com/preview.jpg'
+             'originalContentUrl' => 'https://example.com/original.jpg',
+              'previewImageUrl' => 'https://example.com/preview.jpg'
 			]
 								
 
@@ -106,7 +106,7 @@ if (!is_null($events['events'])) {
 
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'image' => [$messages],
 			];
 
 			$post = json_encode($data);
