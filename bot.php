@@ -104,14 +104,16 @@ if (!is_null($events['events'])) {
                     'data' => 'list'
             ];
 
-/*
+
             $template = [
                       'type' => 'buttons',
                       'thumbnailImageUrl' => 'https://example.com/bot/images/image.jpg',
                       'title' => 'Menu',
                       'text' => 'Please select',
-                      'actions' => [$action1,$action2]
+                      'actions' => [$action1]
             ];
+
+            /*
 
              $myStr = [
 				'type' => 'template',
