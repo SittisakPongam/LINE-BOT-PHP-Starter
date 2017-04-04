@@ -94,15 +94,15 @@ if (!is_null($events['events'])) {
             		'type'  =>'postback',
                     'label' =>'Check',
                     'data' => 'check'
-            ]
+            ];
 
-            /*
+            
 
             $action2 =[
             		'type'  =>'postback',
                     'label' =>'List',
                     'data' => 'list'
-            ]
+            ];
 
             $template = [
                       'type' => 'buttons',
@@ -110,15 +110,15 @@ if (!is_null($events['events'])) {
                       'title' => 'Menu',
                       'text' => 'Please select',
                       'actions' => [$action1]
-            ]
+            ];
 
-             $messages = [
+             $test = [
 				'type' => 'template',
 				'altText' => 'this is a buttons template',
 				'template' => [$template]
 			];
 
-			*/
+			
 
 			
 
