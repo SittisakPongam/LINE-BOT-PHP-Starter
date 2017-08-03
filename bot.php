@@ -60,7 +60,9 @@ function getWepAPI($userId,$boxId)
 
 
 
-$line_access_token = 'ZHAE6XhjkeKgKkR1C/Y3Hw3n4yPxS8ByGY11+u5IhI5Z8W4Tr+ytOwT5UD+B4x4CsDMa8r1jcrbZ12sSb1ptmwRwjwvff4i82FpwIAyzYXkcMoIZVsSOmp+0FROf5wd48Bz4Ztycfk5vYJosSKjI7AdB04t89/1O/w1cDnyilFU=';
+//$line_access_token = 'ZHAE6XhjkeKgKkR1C/Y3Hw3n4yPxS8ByGY11+u5IhI5Z8W4Tr+ytOwT5UD+B4x4CsDMa8r1jcrbZ12sSb1ptmwRwjwvff4i82FpwIAyzYXkcMoIZVsSOmp+0FROf5wd48Bz4Ztycfk5vYJosSKjI7AdB04t89/1O/w1cDnyilFU=';
+
+$line_access_token ='71iCqzubKdOiHIt9HYT6CjGpp7qfgNQh9aatLgO0C/FLf+kClgYtHuLcsvN6o8s30yNS5yGphl05b3LzCuawJZjgWHpQW/yXc/HHqse24CqvF7TGbQXeNj+FU2QaYv59Q7ihGKedxzFL3CFyZtbkUAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -82,8 +84,6 @@ if (!is_null($events['events'])) {
             $userId ='l'.$userId;
 
 
-
-
             $myText = getWepAPI($userId,$text);
 
 			
@@ -94,12 +94,13 @@ if (!is_null($events['events'])) {
 
 
 
-			$messages = [
+		/*	$messages = [
 			 'type' => 'image',
              'originalContentUrl' => 'https://example.com/original.jpg',
               'previewImageUrl' => 'https://example.com/preview.jpg'
 			];
-								
+		
+		*/						
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
