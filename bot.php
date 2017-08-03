@@ -84,7 +84,7 @@ if (!is_null($events['events'])) {
             $userId ='l'.$userId;
 
 
-            $myText = getWepAPI($userId,$text);
+         //   $myText = getWepAPI($userId,$text);
 
 			
 			 $messages = [
