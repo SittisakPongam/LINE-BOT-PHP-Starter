@@ -40,12 +40,12 @@ function gettoken($userId) {
 }
 
 
-function getWepAPI($userId,$boxId)
+function getWepAPI($link,$userId,$boxId)
 {
 
             $access_token = gettoken('');
 
-            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId.'/'.$boxId;		
+            $url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$link.'/'.$userId.'/'.$boxId;		
 
             $curl = curl_init($url);
             $headers = array('Authorization: Bearer '.$access_token);
@@ -87,18 +87,18 @@ if (!is_null($events['events'])) {
            // $myText = getWepAPI($userId,$text);
 
 			
-			//  $messages = [
-			// 	'type' => 'text',
-			// 	'text' => $userId
-			// ];
-
-
-
-			$messages = [
-			 'type' => 'image',
-             'originalContentUrl' => 'https://example.com/original.jpg',
-              'previewImageUrl' => 'https://example.com/preview.jpg'
+			 $messages = [
+				'type' => 'text',
+				'text' => $text
 			];
+
+
+
+			// $messages = [
+			//  'type' => 'image',
+   //           'originalContentUrl' => 'https://example.com/original.jpg',
+   //            'previewImageUrl' => 'https://example.com/preview.jpg'
+			// ];
 		
 								
 
