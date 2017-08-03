@@ -1,5 +1,5 @@
 <?php
 
-echo phpinfo();
+echo "Hello LINE BOT";
 
 ?>
