@@ -47,7 +47,7 @@ function getWepAPI($link,$userId,$boxId)
 
             $url ="";
 
-            if($url == 'status' ) 
+            if($link == 'status' ) 
             {
                  $url = 'https://webapi.forthtrack.com/trackingresource/api/line/'.$userId.'/'.$boxId;		
             }
