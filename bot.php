@@ -87,20 +87,20 @@ if (!is_null($events['events'])) {
            // $myText = getWepAPI($userId,$text);
 
 			
-			 $messages = [
-				'type' => 'text',
-				'text' => $userId
-			];
+			//  $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $userId
+			// ];
 
 
 
-		/*	$messages = [
+			$messages = [
 			 'type' => 'image',
              'originalContentUrl' => 'https://example.com/original.jpg',
               'previewImageUrl' => 'https://example.com/preview.jpg'
 			];
 		
-		*/						
+								
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
