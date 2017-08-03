@@ -127,8 +127,5 @@ if (!is_null($events['events'])) {
 	}
 }
 
- $myText = test('');
-
-echo $myText;
 
 ?>
