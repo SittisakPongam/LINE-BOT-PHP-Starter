@@ -98,7 +98,25 @@ if (!is_null($events['events'])) {
 				'text' => $myText
 			];
 
-
+$confirm=[  
+  'type' => 'template',
+  'altText' => 'this is a confirm template',
+  'template' => [ 
+      'type' => 'confirm',
+      'text' => 'Are you sure?',
+      'actions' => array(
+          
+            'type' => 'message',
+            'label' => 'Yes',
+            'text' => 'yes'
+          ,
+          
+            'type' =>'message',
+            'label' => 'No',
+            'text' => 'no'          
+      )
+  ]  
+  ];
 
 			// $messages = [
 			//  'type' => 'image',
@@ -113,7 +131,7 @@ if (!is_null($events['events'])) {
                     //https://api.line.me/v2/bot/message/reply
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$confirm],
 			];
 
 			$post = json_encode($data);
