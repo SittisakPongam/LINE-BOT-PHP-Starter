@@ -91,8 +91,8 @@ if (!is_null($events['events'])) {
 
             $messages ="";
 
-            // if($text == "location")
-            // {
+            if($text == "location")
+            {
              
             	//$messages = getWepAPI('status',$userId,$text);
 
@@ -103,9 +103,7 @@ if (!is_null($events['events'])) {
 			    'latitude'=> 35.65910807942215,
 			    'longitude'=> 139.70372892916203
 			   ];
-
-
-// |           }
+            }
 						
 			//  $messages = [
 			// 	'type' => 'text',
