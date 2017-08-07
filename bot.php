@@ -106,8 +106,11 @@ if (!is_null($events['events'])) {
 			   ];
 
 
-|           }
-			
+|           }else if ($text == "508451")
+			{
+			   $messages = getWepAPI('status',$userId,$text);
+			}
+						
 			//  $messages = [
 			// 	'type' => 'text',
 			// 	'text' => $text
