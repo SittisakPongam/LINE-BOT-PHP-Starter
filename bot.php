@@ -104,11 +104,18 @@ if (!is_null($events['events'])) {
 			    'longitude'=> 139.70372892916203
 			   ];
             }
+
+
+            if($text =="text")
+            {
+
+            	 $messages = [
+				'type' => 'text',
+				'text' => $text
+				];
+            }
 						
-			//  $messages = [
-			// 	'type' => 'text',
-			// 	'text' => $text
-			// ];
+			
 
 			// $confirm=[  
 			//   'type' => 'template',
