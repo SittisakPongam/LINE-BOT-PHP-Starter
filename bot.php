@@ -89,16 +89,6 @@ if (!is_null($events['events'])) {
 
             $userId ='l'.$userId;
 
-            
-            if($text =="menu")
-            {
-
-
-            }else
-            {
-
-
-            }
 
    //          $myText = getWepAPI('status',$userId,$text);
 
@@ -137,17 +127,6 @@ if (!is_null($events['events'])) {
 			  //   'longitude'=> 139.70372892916203
 			  //  }];
 
-			     $messages = array(
-          
-            'type' => 'message',
-            'label' => 'Yes',
-            'text' => 'yes'
-          ,
-          
-            'type' =>'message',
-            'label' => 'No',
-            'text' => 'no'          
-      );
 
 			// $messages = [
 			//  'type' => 'image',
