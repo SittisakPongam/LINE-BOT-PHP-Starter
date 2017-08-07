@@ -177,6 +177,52 @@ if (!is_null($events['events'])) {
 
 			}
 
+			if($text =="carousel" || $text=="Carousel")
+			{
+
+					  $messages = [
+					        'type' => 'template',
+					        'altText' => 'カルーセル',
+					        'template' => [
+					            'type' => 'carousel',
+					            'columns' => [
+					                [
+					                    'title' => 'カルーセル1',
+					                    'text' => 'カルーセル1です',
+					                    'actions' => [
+					                        [
+					                            'type' => 'postback',
+					                            'label' => 'webhookにpost送信',
+					                            'data' => 'value'
+					                        ],
+					                        [
+					                            'type' => 'uri',
+					                            'label' => '美容の口コミ広場を見る',
+					                            'uri' => 'http://clinic.e-kuchikomi.info/'
+					                        ]
+					                    ]
+					                ],
+					                [
+					                    'title' => 'カルーセル2',
+					                    'text' => 'カルーセル2です',
+					                    'actions' => [
+					                        [
+					                            'type' => 'postback',
+					                            'label' => 'webhookにpost送信',
+					                            'data' => 'value'
+					                        ],
+					                        [
+					                            'type' => 'uri',
+					                            'label' => '女美会を見る',
+					                            'uri' => 'https://jobikai.com/'
+					                        ]
+					                    ]
+					                ],
+					            ]
+					        ]
+					    ];
+			}
+
             
 		// 	$confirm = [   'type' => 'template',
   //     'altText' => 'this is a confirm template',
