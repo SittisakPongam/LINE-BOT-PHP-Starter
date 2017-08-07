@@ -93,10 +93,10 @@ if (!is_null($events['events'])) {
    //          $myText = getWepAPI('status',$userId,$text);
 
 			
-			 $messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+			//  $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $text
+			// ];
 
 			// $confirm=[  
 			//   'type' => 'template',
@@ -128,11 +128,11 @@ if (!is_null($events['events'])) {
 			  //  }];
 
 
-			// $messages = [
-			//  'type' => 'image',
-   //           'originalContentUrl' => 'https://example.com/original.jpg',
-   //            'previewImageUrl' => 'https://example.com/preview.jpg'
-			// ];
+			$messages = [
+			 'type' => 'image',
+             'originalContentUrl' => 'https://example.com/original.jpg',
+              'previewImageUrl' => 'https://example.com/preview.jpg'
+			];
 		
 								
 
