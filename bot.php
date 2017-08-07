@@ -114,6 +114,16 @@ if (!is_null($events['events'])) {
 				'text' => $text
 				];
             }
+
+
+            ($text =="image")
+            {
+            		$messages = [
+					 'type' => 'image',
+		             'originalContentUrl' => 'https://example.com/original.jpg',
+		              'previewImageUrl' => 'https://example.com/preview.jpg'
+					];
+            }
 						
 			
 
@@ -159,11 +169,7 @@ if (!is_null($events['events'])) {
 
 
             // set image
-			// $messages = [
-			//  'type' => 'image',
-   //           'originalContentUrl' => 'https://example.com/original.jpg',
-   //            'previewImageUrl' => 'https://example.com/preview.jpg'
-			// ];
+
 		
 								
 
