@@ -128,7 +128,7 @@ if (!is_null($events['events'])) {
 			if($text =="confirm")
 			{
 
-				$confirm=[  
+				$messages=[  
 			  'type' => 'template',
 			  'altText' => 'this is a confirm template',
 			  'template' => [ 
