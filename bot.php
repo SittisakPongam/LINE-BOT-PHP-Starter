@@ -131,7 +131,7 @@ if (!is_null($events['events'])) {
                     //https://api.line.me/v2/bot/message/reply
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$confirm],
 			];
 
 			$post = json_encode($data);
