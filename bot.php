@@ -130,20 +130,20 @@ if (!is_null($events['events'])) {
 
 				   $messages = [
 			        'type' => 'template',
-			        'altText' => '確認ダイアログ',
+			        'altText' => 'ยืนยันการเลือกเมนู',
 			        'template' => [
 			            'type' => 'confirm',
-			            'text' => '元気ですかー？',
+			            'text' => 'ยืนยัน？',
 			            'actions' => [
 			                [
 			                    'type' => 'message',
-			                    'label' => '元気です',
-			                    'text' => '元気です'
+			                    'label' => 'ตกลง',
+			                    'text' => 'ตกลง'
 			                ],
 			                [
 			                    'type' => 'message',
-			                    'label' => 'まあまあです',
-			                    'text' => 'まあまあです'
+			                    'label' => 'ยกเลิก',
+			                    'text' => 'ยกเลิก'
 			                ],
 			            ]
 			        ]
@@ -155,21 +155,21 @@ if (!is_null($events['events'])) {
 
 				 $messages = [
 				        'type' => 'template',
-				        'altText' => 'ボタン',
+				        'altText' => 'เลือกเมนู',
 				        'template' => [
 				            'type' => 'buttons',
-				            'title' => 'タイトルです',
-				            'text' => '選択してね',
+				            'title' => 'รายการโปรด',
+				            'text' => 'โปรดเลือก',
 				            'actions' => [
 				                [
 				                    'type' => 'postback',
-				                    'label' => 'webhookにpost送信',
+				                    'label' => 'forthtrack.com',
 				                    'data' => 'value'
 				                ],
 				                [
 				                    'type' => 'uri',
-				                    'label' => 'googleへ移動',
-				                    'uri' => 'https://google.com'
+				                    'label' => 'forthtrack.com',
+				                    'uri' => 'http://www.forthtrack.com'
 				                ]
 				            ]
 				        ]
