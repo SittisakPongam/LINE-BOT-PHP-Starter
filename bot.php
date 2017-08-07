@@ -128,25 +128,26 @@ if (!is_null($events['events'])) {
 			if($text =="confirm")
 			{
 
-				$messages=[  
-			  'type' => 'template',
-			  'altText' => 'this is a confirm template',
-			  'template' => [ 
-			      'type' => 'confirm',
-			      'text' => 'Are you sure?',
-			      'actions' => array(
-			          
-			            'type' => 'message',
-			            'label' => 'Yes',
-			            'text' => 'yes'
-			          ,
-			          
-			            'type' =>'message',
-			            'label' => 'No',
-			            'text' => 'no'          
-			      )
-			  ]  
-			  ];
+				   $messages = [
+        'type' => 'template',
+        'altText' => '確認ダイアログ',
+        'template' => [
+            'type' => 'confirm',
+            'text' => '元気ですかー？',
+            'actions' => [
+                [
+                    'type' => 'message',
+                    'label' => '元気です',
+                    'text' => '元気です'
+                ],
+                [
+                    'type' => 'message',
+                    'label' => 'まあまあです',
+                    'text' => 'まあまあです'
+                ],
+            ]
+        ]
+    ];
 			}
 
 			
