@@ -90,8 +90,23 @@ if (!is_null($events['events'])) {
             $userId ='l'.$userId;
 
 
-   //          $myText = getWepAPI('status',$userId,$text);
+            $messages ="";
 
+            if($text == "location")
+            {
+             
+            	//$messages = getWepAPI('status',$userId,$text);
+
+                $messages =[			  
+			    'type' => 'location',
+			    'title' => 'my location',
+			    'address'=> '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
+			    'latitude'=> 35.65910807942215,
+			    'longitude'=> 139.70372892916203
+			   ];
+
+
+|           }
 			
 			//  $messages = [
 			// 	'type' => 'text',
@@ -118,15 +133,31 @@ if (!is_null($events['events'])) {
 			//   ]  
 			//   ];
 
-            $messages =[			  
-			    'type' => 'location',
-			    'title' => 'my location',
-			    'address'=> '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
-			    'latitude'=> 35.65910807942215,
-			    'longitude'=> 139.70372892916203
-			   ];
+            // set location
+
+            
+
+		// 	$confirm = [   'type' => 'template',
+  //     'altText' => 'this is a confirm template',
+  //     'template' => {
+  //     'type' => 'confirm',
+  //     'text' => 'Are you sure?',
+  //     'actions' : [
+  //         {
+  //           'type' => 'message',
+  //           "label": "Yes",
+  //           "text": "yes"
+  //         },
+  //         {
+  //           "type": "message",
+  //           "label": "No",
+  //           "text": "no"
+  //         }
+  //     ]
+  // }];
 
 
+            // set image
 			// $messages = [
 			//  'type' => 'image',
    //           'originalContentUrl' => 'https://example.com/original.jpg',
