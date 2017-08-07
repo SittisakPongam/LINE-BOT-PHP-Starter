@@ -91,8 +91,8 @@ if (!is_null($events['events'])) {
 
             $messages ="";
 
-            if($text == "location")
-            {
+            // if($text == "location")
+            // {
              
             	//$messages = getWepAPI('status',$userId,$text);
 
@@ -105,7 +105,7 @@ if (!is_null($events['events'])) {
 			   ];
 
 
-|           }
+// |           }
 						
 			//  $messages = [
 			// 	'type' => 'text',
