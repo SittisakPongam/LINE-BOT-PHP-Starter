@@ -182,38 +182,38 @@ if (!is_null($events['events'])) {
 
 					  $messages = [
 					        'type' => 'template',
-					        'altText' => 'カルーセル',
+					        'altText' => 'รายการรถ',
 					        'template' => [
 					            'type' => 'carousel',
 					            'columns' => [
 					                [
-					                    'title' => 'カルーセル1',
-					                    'text' => 'カルーセル1です',
+					                    'title' => 'รายการรถ',
+					                    'text' => 'โปรดเลือก',
 					                    'actions' => [
 					                        [
 					                            'type' => 'postback',
-					                            'label' => 'webhookにpost送信',
-					                            'data' => 'value'
+					                            'label' => 'office 1',
+					                            'data' => '508450'
 					                        ],
 					                        [
 					                            'type' => 'uri',
-					                            'label' => '美容の口コミ広場を見る',
+					                            'label' => 'การสั่งการ',
 					                            'uri' => 'http://clinic.e-kuchikomi.info/'
 					                        ]
 					                    ]
 					                ],
 					                [
-					                    'title' => 'カルーセル2',
-					                    'text' => 'カルーセル2です',
+					                    'title' => 'รายการรถ',
+					                    'text' => 'โปรดเลือก',
 					                    'actions' => [
 					                        [
 					                            'type' => 'postback',
-					                            'label' => 'webhookにpost送信',
-					                            'data' => 'value'
+					                            'label' => 'office 2',
+					                            'data' => '508450'
 					                        ],
 					                        [
 					                            'type' => 'uri',
-					                            'label' => '女美会を見る',
+					                            'label' => 'การสั่งการ',
 					                            'uri' => 'https://jobikai.com/'
 					                        ]
 					                    ]
