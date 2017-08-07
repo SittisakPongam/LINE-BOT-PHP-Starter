@@ -89,14 +89,24 @@ if (!is_null($events['events'])) {
 
             $userId ='l'.$userId;
 
+            
+            if($text =="menu")
+            {
 
-            $myText = getWepAPI('status',$userId,$text);
+
+            }else
+            {
+
+
+            }
+
+   //          $myText = getWepAPI('status',$userId,$text);
 
 			
-			 $messages = [
-				'type' => 'text',
-				'text' => $myText
-			];
+			//  $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $myText
+			// ];
 
 			// $confirm=[  
 			//   'type' => 'template',
@@ -118,14 +128,14 @@ if (!is_null($events['events'])) {
 			//   ]  
 			//   ];
 
-     //        $location =[
-			  // {
-			  //   'type' => 'location',
-			  //   'title' => 'my location',
-			  //   'address'=> '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
-			  //   'latitude'=> 35.65910807942215,
-			  //   'longitude'=> 139.70372892916203
-			  //  }];
+            $messages =[
+			  {
+			    'type' => 'location',
+			    'title' => 'my location',
+			    'address'=> '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
+			    'latitude'=> 35.65910807942215,
+			    'longitude'=> 139.70372892916203
+			   }];
 
 			// $messages = [
 			//  'type' => 'image',
