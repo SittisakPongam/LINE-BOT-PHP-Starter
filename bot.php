@@ -118,6 +118,15 @@ if (!is_null($events['events'])) {
 			  ]  
 			  ];
 
+            $location =[
+			  {
+			    'type': 'location',
+			    'title': 'my location',
+			    'address': '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
+			    'latitude': 35.65910807942215,
+			    'longitude': 139.70372892916203
+			   }];
+
 			// $messages = [
 			//  'type' => 'image',
    //           'originalContentUrl' => 'https://example.com/original.jpg',
@@ -131,7 +140,7 @@ if (!is_null($events['events'])) {
                     //https://api.line.me/v2/bot/message/reply
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$confirm],
+				'messages' => [$location],
 			];
 
 			$post = json_encode($data);
