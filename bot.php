@@ -153,7 +153,7 @@ if (!is_null($events['events'])) {
 			if(text =="button")
 			{
 
-				 $messageData = [
+				 $messages = [
 				        'type' => 'template',
 				        'altText' => 'ボタン',
 				        'template' => [
