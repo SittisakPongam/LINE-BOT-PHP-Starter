@@ -125,27 +125,31 @@ if (!is_null($events['events'])) {
 					];
             }
 						
-			
+			if($text =="confirm")
+			{
 
-			// $confirm=[  
-			//   'type' => 'template',
-			//   'altText' => 'this is a confirm template',
-			//   'template' => [ 
-			//       'type' => 'confirm',
-			//       'text' => 'Are you sure?',
-			//       'actions' => array(
+				$confirm=[  
+			  'type' => 'template',
+			  'altText' => 'this is a confirm template',
+			  'template' => [ 
+			      'type' => 'confirm',
+			      'text' => 'Are you sure?',
+			      'actions' => array(
 			          
-			//             'type' => 'message',
-			//             'label' => 'Yes',
-			//             'text' => 'yes'
-			//           ,
+			            'type' => 'message',
+			            'label' => 'Yes',
+			            'text' => 'yes'
+			          ,
 			          
-			//             'type' =>'message',
-			//             'label' => 'No',
-			//             'text' => 'no'          
-			//       )
-			//   ]  
-			//   ];
+			            'type' =>'message',
+			            'label' => 'No',
+			            'text' => 'no'          
+			      )
+			  ]  
+			  ];
+			}
+
+			
 
             
 		// 	$confirm = [   'type' => 'template',
