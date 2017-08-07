@@ -140,7 +140,7 @@ if (!is_null($events['events'])) {
                     //https://api.line.me/v2/bot/message/reply
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$location],
+				'messages' => [$messages],
 			];
 
 			$post = json_encode($data);
