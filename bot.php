@@ -116,14 +116,14 @@ if (!is_null($events['events'])) {
             }
 
 
-            ($text =="image")
-            {
-            		$messages = [
-					 'type' => 'image',
-		             'originalContentUrl' => 'https://example.com/original.jpg',
-		              'previewImageUrl' => 'https://example.com/preview.jpg'
-					];
-            }
+     //        ($text =="image")
+     //        {
+     //        		$messages = [
+					//  'type' => 'image',
+		   //           'originalContentUrl' => 'https://example.com/original.jpg',
+		   //            'previewImageUrl' => 'https://example.com/preview.jpg'
+					// ];
+     //        }
 						
 			
 
