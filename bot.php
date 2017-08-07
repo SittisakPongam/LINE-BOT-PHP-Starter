@@ -89,7 +89,6 @@ if (!is_null($events['events'])) {
 
             $userId ='l'.$userId;
 
-
             $messages ="";
 
             if($text == "location")
