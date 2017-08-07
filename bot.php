@@ -103,10 +103,10 @@ if (!is_null($events['events'])) {
    //          $myText = getWepAPI('status',$userId,$text);
 
 			
-			//  $messages = [
-			// 	'type' => 'text',
-			// 	'text' => $myText
-			// ];
+			 $messages = [
+				'type' => 'text',
+				'text' => $text
+			];
 
 			// $confirm=[  
 			//   'type' => 'template',
@@ -163,7 +163,7 @@ if (!is_null($events['events'])) {
 
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => $messages,
+				'messages' => [$messages],
 			];
 
 			$post = json_encode($data);
