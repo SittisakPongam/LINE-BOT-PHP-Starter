@@ -91,7 +91,7 @@ if (!is_null($events['events'])) {
 
             $messages ="";
 
-            if($text == "location")
+            if($text == "location" || $text == "Location")
             {
              
             	//$messages = getWepAPI('status',$userId,$text);
@@ -106,7 +106,7 @@ if (!is_null($events['events'])) {
             }
 
 
-            if($text =="text")
+            if($text =="text" || $text =="Text")
             {
 
             	 $messages = [
@@ -116,7 +116,7 @@ if (!is_null($events['events'])) {
             }
 
 
-            if($text =="image")
+            if($text =="image" || $text =="Image")
             {
             		$messages = [
 					 'type' => 'image',
@@ -125,7 +125,7 @@ if (!is_null($events['events'])) {
 					];
             }
 						
-			if($text =="confirm")
+			if($text =="confirm" || $text == "Confirm")
 			{
 
 				   $messages = [
@@ -150,7 +150,7 @@ if (!is_null($events['events'])) {
 			    ];
 			}
 
-			if(text =="button")
+			if($text =="button" || $text == "Button")
 			{
 
 				 $messages = [
