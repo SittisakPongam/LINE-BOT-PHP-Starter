@@ -10,6 +10,7 @@ function gettoken($userId) {
     $curl = curl_init($oauth2token_url);
 
     $data = 'username=user@forth&password=forth#1234&grant_type=password';
+
     $headers = array('Content-Type: application/x-www-form-urlencoded','Authorization: Basic Zm9ydGhUb29sOlptOXlkR2gwYjI5c01qQXhOdz09');   
 
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
@@ -25,8 +26,6 @@ function gettoken($userId) {
     $authObj = json_decode($json_response);
 
     if (isset($authObj->refresh_token)){
-        //refresh token only granted on first authorization for offline access
-        //save to db for future use (db saving not included in example)
         global $refreshToken;
         $refreshToken = $authObj->refresh_token;
     }
@@ -99,14 +98,12 @@ if (!is_null($events['events'])) {
                 $messages =[			  
 			    'type' => 'location',
 			    'title' => 'my location',
-			    'address'=> '〒150-0002 東京都渋谷区渋谷２丁目２１−１',
-			    'latitude'=> 35.65910807942215,
-			    'longitude'=> 139.70372892916203
+			    'address'=> 'Foth Tracking System',
+			    'latitude'=> 13.773034,
+			    'longitude'=> 100.542488
 			   ];
             }
-
-
-            if($text =="text" || $text =="Text")
+            else if($text =="text" || $text =="Text")
             {
 
             	 $messages = [
@@ -114,18 +111,15 @@ if (!is_null($events['events'])) {
 				'text' => $text
 				];
             }
-
-
-            if($text =="image" || $text =="Image")
+            else if($text =="image" || $text =="Image")
             {
             		$messages = [
 					 'type' => 'image',
 		             'originalContentUrl' => 'https://example.com/original.jpg',
 		              'previewImageUrl' => 'https://example.com/preview.jpg'
 					];
-            }
-						
-			if($text =="confirm" || $text == "Confirm")
+            }					
+			else if($text =="confirm" || $text == "Confirm")
 			{
 
 				   $messages = [
@@ -149,8 +143,7 @@ if (!is_null($events['events'])) {
 			        ]
 			    ];
 			}
-
-			if($text =="button" || $text == "Button")
+			else if($text =="button" || $text == "Button")
 			{
 
 				 $messages = [
@@ -176,8 +169,7 @@ if (!is_null($events['events'])) {
 				    ];
 
 			}
-
-			if($text =="carousel" || $text=="Carousel")
+			else if($text =="carousel" || $text=="Carousel")
 			{
 
 					  $messages = [
